@@ -1,2 +1,3 @@
 #!/bin/dash
-echo $1 > /sys/class/backlight/acpi_video0/brightness
+echo $1 > /sys/class/backlight/acpi_video0/brightness || echo $1 > /sys/class/backlight/intel_backlight/brightness
+# acpi 0-8  intel 0-312 (0 disables backlight for intel)
